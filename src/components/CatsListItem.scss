@@ -1,0 +1,22 @@
+.crd {
+  background-color: #552d5f;
+  border-radius: 30px;
+  margin: 2rem;
+  width: 15rem;
+  text-align: center;
+  .btn-card {
+    width: 80%;
+    height: 3rem;
+    color: white;
+    background-color: #fe9166;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+  .txt-card {
+    color: white;
+    font-size: 22px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}
