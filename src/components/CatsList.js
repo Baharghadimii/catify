@@ -1,8 +1,11 @@
 import React from 'react';
+import CatsListItem from './CatsListItem';
 
 const CatsList = () => {
   return (
-    <div>Hello</div>
+    <div>
+      <CatsListItem />
+    </div>
   )
 }
 export default CatsList;
