@@ -5,17 +5,14 @@ import './NavBar.scss';
 const NavBar = (props) => {
 
   return (
-    <Navbar expand="lg">
-      <Navbar.Brand href="#home">Catify</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link href="#home">All Cats</Nav.Link>
-          <Nav.Link href="#link">My Cats</Nav.Link>
-        </Nav>
-        <Button variant="outline-success">Sign In</Button>
-      </Navbar.Collapse>
-    </Navbar>
+    <Navbar className='nav' expand="lg">
+      <Navbar.Brand className='brand' href="#home">Catify</Navbar.Brand>
+      <Nav className="mr-auto">
+        <Nav.Link style={{ color: '#7A6181' }} href="#home">All Cats</Nav.Link>
+        <Nav.Link style={{ color: '#7A6181' }} href="#link">My Cats</Nav.Link>
+      </Nav>
+      <Button className="btn-nav" variant="outline-success">Sign In</Button>
+    </Navbar >
   )
 
 }

@@ -1,0 +1,17 @@
+.nav {
+  background-color: #381841;
+  .brand {
+    color: white;
+    &:hover {
+      color: white;
+    }
+  }
+  .btn-nav {
+    width: 8rem;
+    color: white;
+    border: none;
+    margin-right: 1rem;
+    border-radius: 10px;
+    background-color: #552d5f;
+  }
+}
