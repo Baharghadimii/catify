@@ -18,8 +18,15 @@ export default function useApplicationData() {
       }
     }).then(res => {
       const list = res.data;
-      dispatch({ type: SET_APPLICATION_DATA, catList: list })
+      const imgList = []
+      res.data.forEach(cat => {
+        axios.get(`https://api.thecatapi.com/v1/images/search?breed_ids=${cat.id}`)
+          .then(item => {
+            cat.image = item.data[0].url
+            dispatch({ type: SET_APPLICATION_DATA, catList: list })
+          })
+      })
     })
-  })
+  }, [])
   return { state }
 }
