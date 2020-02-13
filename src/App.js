@@ -1,26 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar';
 import CatsList from './components/CatsList';
 import Cat from './components/Cat';
-
+import useApplicationData from './hooks/useApplicationData.js';
 
 function App() {
 
-  const [state, setState] = useState({
-    display: 'LIST'
-  });
+  const [display, setDisplay] = useState('LIST');
+  const {
+    state
+  } = useApplicationData();
+  const [catList, setCatList] = useState([]);
+  const [cat, setCat] = useState({});
 
-  const show = (item) => {
-    setState({ ...state, display: item })
+  useEffect(() => {
+    setCatList(state.catList);
+  }, [state]);
+
+  const show = (item, cat) => {
+    setDisplay(item)
+    setCat(cat);
   }
-
   return (
     <div className="App">
       <NavBar show={show} />
-      {state.display === 'LIST' && <CatsList onClick={show} />}
-      {state.display === 'ITEM' && <Cat />}
+      {display === 'LIST' && <CatsList onClick={show} list={catList} />}
+      {display === 'ITEM' && <Cat cat={cat} />}
     </div>
   );
 }
