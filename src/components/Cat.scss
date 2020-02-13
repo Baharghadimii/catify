@@ -1,4 +1,6 @@
-.item {
+.item-card {
+  display: flex;
+  flex-direction: row;
   width: 80%;
   height: 30rem;
   background-color: #35233a;
@@ -8,6 +10,10 @@
   -webkit-box-shadow: -11px 13px 36px -22px rgba(0, 0, 0, 1);
   -moz-box-shadow: -11px 13px 36px -22px rgba(0, 0, 0, 1);
   box-shadow: -11px 13px 36px -22px rgba(0, 0, 0, 1);
+  .div-txt {
+    width: 50%;
+    height: 100%;
+  }
   .itm-txt {
     color: white;
     margin-left: 3rem;
@@ -30,5 +36,17 @@
     border-radius: 10px;
     border: none;
     color: white;
+  }
+  .pic-div {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+  }
+  .pic {
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 19%;
+    width: 80%;
+    height: 50%;
   }
 }
