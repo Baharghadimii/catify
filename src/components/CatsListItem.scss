@@ -1,14 +1,17 @@
 .crd {
-  background-color: #552d5f;
+  background-color: #35233a;
   border-radius: 30px;
   margin: 2rem;
   width: 15rem;
   text-align: center;
+  -webkit-box-shadow: -22px 25px 45px -19px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -22px 25px 45px -19px rgba(0, 0, 0, 0.75);
+  box-shadow: -22px 25px 45px -19px rgba(0, 0, 0, 0.75);
   .btn-card {
     width: 80%;
     height: 3rem;
     color: white;
-    background-color: #fe9166;
+    background-color: #fa885b;
     border: none;
     border-radius: 10px;
     font-size: 15px;
