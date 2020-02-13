@@ -5,6 +5,7 @@ import NavBar from './components/NavBar';
 import CatsList from './components/CatsList';
 import Cat from './components/Cat';
 
+
 function App() {
 
   const [state, setState] = useState({
@@ -17,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
+      <NavBar show={show} />
       {state.display === 'LIST' && <CatsList onClick={show} />}
       {state.display === 'ITEM' && <Cat />}
     </div>
