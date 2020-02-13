@@ -1,10 +1,15 @@
 import React from 'react';
 import CatsListItem from './CatsListItem';
 
-const CatsList = () => {
+const CatsList = (props) => {
+
+  const onClick = (item) => {
+    props.onClick(item)
+  }
+
   return (
     <div>
-      <CatsListItem />
+      <CatsListItem onClick={onClick} />
     </div>
   )
 }
