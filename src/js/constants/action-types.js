@@ -1,1 +1,0 @@
-export const SHOW_CATS = "SHOW_CATS";
