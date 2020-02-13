@@ -1,5 +1,6 @@
 import React from 'react';
 import CatsListItem from './CatsListItem';
+import './CatsList.scss'
 
 const CatsList = (props) => {
 
@@ -7,7 +8,7 @@ const CatsList = (props) => {
     props.onClick(item)
   }
   return (
-    <div>
+    <div className="list">
       {props.list.map(item => {
         return <CatsListItem onClick={onClick} item={item} />
       })}
