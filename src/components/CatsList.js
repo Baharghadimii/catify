@@ -3,14 +3,13 @@ import CatsListItem from './CatsListItem';
 import './CatsList.scss'
 
 const CatsList = (props) => {
-  // const onClick = (item) => {
-  //   props.onClick(item)
-  // }
+  const onClick = (item, cat) => {
+    props.onClick(item, cat);
+  }
   return (
     <div className="list">
       {props.list.map(item => {
-        console.log(item.image);
-        return <CatsListItem id={item.id} item={item} />
+        return <CatsListItem id={item.id} item={item} onClick={onClick} />
       })}
     </div>
   )

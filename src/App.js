@@ -13,19 +13,21 @@ function App() {
     state
   } = useApplicationData();
   const [catList, setCatList] = useState([]);
+  const [cat, setCat] = useState({});
 
   useEffect(() => {
     setCatList(state.catList);
   }, [state]);
-  const show = (item) => {
+
+  const show = (item, cat) => {
     setDisplay(item)
+    setCat(cat);
   }
-  console.log(state)
   return (
     <div className="App">
       <NavBar show={show} />
       {display === 'LIST' && <CatsList onClick={show} list={catList} />}
-      {display === 'ITEM' && <Cat />}
+      {display === 'ITEM' && <Cat cat={cat} />}
     </div>
   );
 }

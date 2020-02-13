@@ -18,7 +18,6 @@ export default function useApplicationData() {
       }
     }).then(res => {
       const list = res.data;
-      const imgList = []
       res.data.forEach(cat => {
         axios.get(`https://api.thecatapi.com/v1/images/search?breed_ids=${cat.id}`)
           .then(item => {
