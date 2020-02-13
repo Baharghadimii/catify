@@ -4,23 +4,25 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar';
 import CatsList from './components/CatsList';
 import Cat from './components/Cat';
-
+import useApplicationData from './hooks/useApplicationData.js';
 
 function App() {
 
-  const [state, setState] = useState({
-    display: 'LIST'
-  });
+  const [display, setDisplay] = useState('LIST')
+
+  const {
+    state
+  } = useApplicationData();
 
   const show = (item) => {
-    setState({ ...state, display: item })
+    setDisplay(item)
   }
-
+  console.log(state);
   return (
     <div className="App">
       <NavBar show={show} />
-      {state.display === 'LIST' && <CatsList onClick={show} />}
-      {state.display === 'ITEM' && <Cat />}
+      {display === 'LIST' && <CatsList onClick={show} />}
+      {display === 'ITEM' && <Cat />}
     </div>
   );
 }
