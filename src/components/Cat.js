@@ -1,11 +1,11 @@
 import React from 'react';
 import './Cat.scss';
 
-const Cat = () => {
+const Cat = (props) => {
   return (
     <div className='item-card'>
       <div className='div-txt'>
-        <h1 className='itm-txt'>Abyssinian</h1>
+        <h1 className='itm-txt'>{props.cat.name}</h1>
         <div className='div-desc'>
           <p className='itm-desc'>
             The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.
