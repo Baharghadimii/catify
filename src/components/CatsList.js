@@ -6,10 +6,11 @@ const CatsList = (props) => {
   const onClick = (item) => {
     props.onClick(item)
   }
-
   return (
     <div>
-      <CatsListItem onClick={onClick} />
+      {props.list.map(item => {
+        return <CatsListItem onClick={onClick} item={item} />
+      })}
     </div>
   )
 }

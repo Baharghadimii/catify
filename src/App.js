@@ -17,11 +17,10 @@ function App() {
   const show = (item) => {
     setDisplay(item)
   }
-  console.log(state);
   return (
     <div className="App">
       <NavBar show={show} />
-      {display === 'LIST' && <CatsList onClick={show} />}
+      {display === 'LIST' && <CatsList onClick={show} list={state.catList} />}
       {display === 'ITEM' && <Cat />}
     </div>
   );
