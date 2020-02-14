@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaCheck } from 'react-icons/fa';
 import './Cat.scss';
 
 const Cat = (props) => {
@@ -12,13 +13,17 @@ const Cat = (props) => {
       open: true
     });
     setTimeout(() => {
-
-    })
+      setModal({
+        open: false
+      })
+    }, 3000)
   }
   return (
     <div>
       {
-        modal.open && <div className="spinner-div">
+        modal.open &&
+        <div className="spinner-div">
+          <span style={{ color: 'white' }}><FaCheck size={50} /></span>
           <div class="sk-circle">
             <div class="sk-circle1 sk-child"></div>
             <div class="sk-circle2 sk-child"></div>
@@ -33,6 +38,7 @@ const Cat = (props) => {
             <div class="sk-circle11 sk-child"></div>
             <div class="sk-circle12 sk-child"></div>
           </div>
+          <h4 className="spinner-txt">Adding...</h4>
         </div>
       }
       {!modal.open && < div className='item-card' >
