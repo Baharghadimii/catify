@@ -5,6 +5,9 @@ import './CatsList.scss'
 const CatsList = (props) => {
   const onClick = (item, cat) => {
     props.onClick(item, cat);
+    window.scrollTo({
+      top: 0
+    })
   }
   return (
     <div className="list">
