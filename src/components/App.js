@@ -4,9 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './NavBar';
 import CatsList from './CatsList';
 import Cat from './Cat';
+import { getData } from '../js/actions/index';
+import { connect } from "react-redux";
 import useApplicationData from '../hooks/useApplicationData.js';
 
-function App() {
+function App(props) {
 
   const [display, setDisplay] = useState('LIST');
   const {
@@ -16,6 +18,7 @@ function App() {
   const [cat, setCat] = useState({});
 
   useEffect(() => {
+    console.log(props.getData());
     setCatList(state.catList);
   }, [state]);
 
@@ -31,5 +34,13 @@ function App() {
     </div>
   );
 }
+function mapStateToProps(state) {
+  return {
+    cats: state.cats
+  };
+}
 
-export default App;
+export default connect(
+  mapStateToProps,
+  { getData }
+)(App);
