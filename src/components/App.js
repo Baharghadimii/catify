@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from './components/NavBar';
-import CatsList from './components/CatsList';
-import Cat from './components/Cat';
-import useApplicationData from './hooks/useApplicationData.js';
+import NavBar from './NavBar';
+import CatsList from './CatsList';
+import Cat from './Cat';
+import useApplicationData from '../hooks/useApplicationData.js';
 
 function App() {
 
