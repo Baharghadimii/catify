@@ -15,6 +15,7 @@ const Cat = (props) => {
   })
 
   const handleAddToList = () => {
+    localStorage.setItem('token', props.cat)
     setModal({
       open: true
     });
@@ -36,8 +37,10 @@ const Cat = (props) => {
       setModal({
         open: false
       })
-    }, 5000);
+    }, 4000);
+
   }
+
   return (
     <div>
       {

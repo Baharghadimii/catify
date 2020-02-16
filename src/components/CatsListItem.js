@@ -9,7 +9,7 @@ const CatsListItem = (props) => {
 
   }
   return (
-    <Card id={props.id} className='crd'>
+    <Card id={props.item.id} className='crd'>
       <Card.Img style={{ width: '8rem', height: '8rem', borderRadius: '50%', margin: '0 auto', marginTop: '1rem' }} variant="top"
         src={props.item.image}
         alt='' />
